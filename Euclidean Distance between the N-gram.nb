@@ -1,0 +1,716 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36859,        706]
+NotebookOptionsPosition[     33989,        654]
+NotebookOutlinePosition[     34385,        670]
+CellTagsIndexPosition[     34342,        667]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"generatedNames", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<uncane\>\"", ",", "\"\<acchee\>\"", ",", "\"\<acunel\>\"", ",", 
+     "\"\<afcolo\>\"", ",", "\"\<afook\>\"", ",", "\"\<afruc\>\"", ",", 
+     "\"\<agileed\>\"", ",", "\"\<agliss\>\"", ",", "\"\<agmel\>\"", ",", 
+     "\"\<akero\>\"", ",", "\"\<alapa\>\"", ",", "\"\<alasl\>\"", ",", 
+     "\"\<alicnee\>\"", ",", "\"\<aloon\>\"", ",", "\"\<alren\>\"", ",", 
+     "\"\<alzu\>\"", ",", "\"\<amine\>\"", ",", "\"\<ammaps\>\"", ",", 
+     "\"\<amoaas\>\"", ",", "\"\<ampheen\>\"", ",", "\"\<anaqoile\>\"", ",", 
+     "\"\<anbeet\>\"", ",", "\"\<anchr\>\"", ",", "\"\<anetat\>\"", ",", 
+     "\"\<anpel\>\"", ",", "\"\<antlerr\>\"", ",", "\"\<antreer\>\"", ",", 
+     "\"\<anwoood\>\"", ",", "\"\<aphaun\>\"", ",", "\"\<aphrle\>\"", ",", 
+     "\"\<apilhe\>\"", ",", "\"\<apolgo\>\"", ",", "\"\<apven\>\"", ",", 
+     "\"\<areccherunn\>\"", ",", "\"\<ariyl\>\"", ",", "\"\<arkeowo\>\"", 
+     ",", "\"\<arniny\>\"", ",", "\"\<arookcon\>\"", ",", "\"\<arorhel\>\"", 
+     ",", "\"\<arulin\>\"", ",", "\"\<arun\>\"", ",", "\"\<arutola\>\"", ",", 
+     "\"\<askusnal\>\"", ",", "\"\<atreek\>\"", ",", "\"\<aunin\>\"", ",", 
+     "\"\<axey\>\"", ",", "\"\<azrott\>\"", ",", "\"\<baine\>\"", ",", 
+     "\"\<baldhye\>\"", ",", "\"\<bamylas\>\"", ",", "\"\<baonw\>\"", ",", 
+     "\"\<barbuso\>\"", ",", "\"\<barghel\>\"", ",", "\"\<barke\>\"", ",", 
+     "\"\<batlmeo\>\"", ",", "\"\<batnearg\>\"", ",", "\"\<baundoloac\>\"", 
+     ",", "\"\<bealode\>\"", ",", "\"\<beavuez\>\"", ",", "\"\<beeletye\>\"", 
+     ",", "\"\<belnom\>\"", ",", "\"\<belone\>\"", ",", "\"\<beozade\>\"", 
+     ",", "\"\<betularl\>\"", ",", "\"\<beufzyy\>\"", ",", "\"\<binabele\>\"",
+      ",", "\"\<birnee\>\"", ",", "\"\<bloonbe\>\"", ",", "\"\<bluro\>\"", 
+     ",", "\"\<boalot\>\"", ",", "\"\<boasos\>\"", ",", "\"\<boledet\>\"", 
+     ",", "\"\<boltr\>\"", ",", "\"\<boolul\>\"", ",", "\"\<booruwan\>\"", 
+     ",", "\"\<boring\>\"", ",", "\"\<borkan\>\"", ",", "\"\<bosumyd\>\"", 
+     ",", "\"\<botfigon\>\"", ",", "\"\<bowasbay\>\"", ",", "\"\<bpilreo\>\"",
+      ",", "\"\<brarol\>\"", ",", "\"\<brobhery\>\"", ",", "\"\<brttuf\>\"", 
+     ",", "\"\<bulicel\>\"", ",", "\"\<bumaok\>\"", ",", "\"\<bunlka\>\"", 
+     ",", "\"\<burfe\>\"", ",", "\"\<busrant\>\"", ",", "\"\<byrilel\>\"", 
+     ",", "\"\<bywnux\>\"", ",", "\"\<cachhig\>\"", ",", "\"\<cacoli\>\"", 
+     ",", "\"\<caloh\>\"", ",", "\"\<cangar\>\"", ",", "\"\<canman\>\"", ",", 
+     "\"\<canontye\>\"", ",", "\"\<carbyix\>\"", ",", "\"\<celeut\>\"", ",", 
+     "\"\<celwax\>\"", ",", "\"\<cemmerax\>\"", ",", "\"\<cepisharm\>\"", 
+     ",", "\"\<cepolee\>\"", ",", "\"\<chajtter\>\"", ",", "\"\<chanda\>\"", 
+     ",", "\"\<changha\>\"", ",", "\"\<chaoorm\>\"", ",", "\"\<charheo\>\"", 
+     ",", "\"\<charyl\>\"", ",", "\"\<chatone\>\"", ",", "\"\<chelgy\>\"", 
+     ",", "\"\<chenyme\>\"", ",", "\"\<chetgye\>\"", ",", "\"\<chlilmoge\>\"",
+      ",", "\"\<chloho\>\"", ",", "\"\<chodket\>\"", ",", "\"\<chonty\>\"", 
+     ",", "\"\<chonwl\>\"", ",", "\"\<choop\>\"", ",", "\"\<chostaw\>\"", 
+     ",", "\"\<ciggoth\>\"", ",", "\"\<cocket\>\"", ",", "\"\<colcetle\>\"", 
+     ",", "\"\<colpes\>\"", ",", "\"\<confore\>\"", ",", "\"\<corokle\>\"", 
+     ",", "\"\<corpukuk\>\"", ",", "\"\<cortya\>\"", ",", "\"\<cosono\>\"", 
+     ",", "\"\<coturnl\>\"", ",", "\"\<craill\>\"", ",", "\"\<crakiry\>\"", 
+     ",", "\"\<cralpetur\>\"", ",", "\"\<crheleo\>\"", ",", 
+     "\"\<crilccou\>\"", ",", "\"\<crinele\>\"", ",", "\"\<crlelle\>\"", ",", 
+     "\"\<crrawing\>\"", ",", "\"\<ctarolatl\>\"", ",", "\"\<culnilya\>\"", 
+     ",", "\"\<cunos\>\"", ",", "\"\<cuppi\>\"", ",", "\"\<curolud\>\"", ",", 
+     "\"\<cwilovyt\>\"", ",", "\"\<daazy\>\"", ",", "\"\<daikorgi\>\"", ",", 
+     "\"\<daltede\>\"", ",", "\"\<darlesp\>\"", ",", "\"\<darpawlaf\>\"", 
+     ",", "\"\<deatu\>\"", ",", "\"\<deenlit\>\"", ",", "\"\<degnre\>\"", 
+     ",", "\"\<dengyoe\>\"", ",", "\"\<deofanxeon\>\"", ",", 
+     "\"\<deroane\>\"", ",", "\"\<devtento\>\"", ",", "\"\<dewsozt\>\"", ",", 
+     "\"\<dgarafac\>\"", ",", "\"\<dhalol\>\"", ",", "\"\<dharhi\>\"", ",", 
+     "\"\<dien\>\"", ",", "\"\<dikadcu\>\"", ",", "\"\<dinsee\>\"", ",", 
+     "\"\<discyl\>\"", ",", "\"\<dittion\>\"", ",", "\"\<diwtug\>\"", ",", 
+     "\"\<dkanora\>\"", ",", "\"\<dlaspe\>\"", ",", "\"\<dlegpe\>\"", ",", 
+     "\"\<dluaral\>\"", ",", "\"\<dohot\>\"", ",", "\"\<dokove\>\"", ",", 
+     "\"\<dolstole\>\"", ",", "\"\<donboe\>\"", ",", "\"\<dondur\>\"", ",", 
+     "\"\<doolpel\>\"", ",", "\"\<doroagwe\>\"", ",", "\"\<dqalele\>\"", ",", 
+     "\"\<dramkhin\>\"", ",", "\"\<drantely\>\"", ",", "\"\<dreadika\>\"", 
+     ",", "\"\<dresvoy\>\"", ",", "\"\<drlyp\>\"", ",", "\"\<drutulle\>\"", 
+     ",", "\"\<drwolan\>\"", ",", "\"\<duarkld\>\"", ",", "\"\<dufeo\>\"", 
+     ",", "\"\<dunole\>\"", ",", "\"\<dwabtet\>\"", ",", "\"\<dyasmuv\>\"", 
+     ",", "\"\<ectrih\>\"", ",", "\"\<eean\>\"", ",", "\"\<eegpo\>\"", ",", 
+     "\"\<egode\>\"", ",", "\"\<eketo\>\"", ",", "\"\<elas\>\"", ",", 
+     "\"\<elede\>\"", ",", "\"\<eleeis\>\"", ",", "\"\<eloltrat\>\"", ",", 
+     "\"\<eltoos\>\"", ",", "\"\<emetost\>\"", ",", "\"\<emotracr\>\"", ",", 
+     "\"\<enicton\>\"", ",", "\"\<enlpicg\>\"", ",", "\"\<eowre\>\"", ",", 
+     "\"\<ereais\>\"", ",", "\"\<eridurk\>\"", ",", "\"\<etfilan\>\"", ",", 
+     "\"\<ewezeb\>\"", ",", "\"\<eztityy\>\"", ",", "\"\<fabitw\>\"", ",", 
+     "\"\<falapod\>\"", ",", "\"\<falpuli\>\"", ",", "\"\<feleotte\>\"", ",", 
+     "\"\<felpop\>\"", ",", "\"\<feneg\>\"", ",", "\"\<fgtroxe\>\"", ",", 
+     "\"\<foeby\>\"", ",", "\"\<folher\>\"", ",", "\"\<foonib\>\"", ",", 
+     "\"\<fortryy\>\"", ",", "\"\<fownor\>\"", ",", "\"\<framgoge\>\"", ",", 
+     "\"\<frelter\>\"", ",", "\"\<frenghug\>\"", ",", "\"\<frense\>\"", ",", 
+     "\"\<friovy\>\"", ",", "\"\<frleoscur\>\"", ",", "\"\<frolton\>\"", ",", 
+     "\"\<froosous\>\"", ",", "\"\<frunon\>\"", ",", "\"\<fulocn\>\"", ",", 
+     "\"\<futla\>\"", ",", "\"\<fypron\>\"", ",", "\"\<fywucye\>\"", ",", 
+     "\"\<gadoron\>\"", ",", "\"\<gamodee\>\"", ",", "\"\<gangeost\>\"", ",", 
+     "\"\<gaomos\>\"", ",", "\"\<garkewe\>\"", ",", "\"\<garpo\>\"", ",", 
+     "\"\<garte\>\"", ",", "\"\<gatloct\>\"", ",", "\"\<gbufofi\>\"", ",", 
+     "\"\<geanr\>\"", ",", "\"\<geovit\>\"", ",", "\"\<geygochrde\>\"", ",", 
+     "\"\<ghamunto\>\"", ",", "\"\<ghaopal\>\"", ",", "\"\<gilcyn\>\"", ",", 
+     "\"\<giolun\>\"", ",", "\"\<givlele\>\"", ",", "\"\<giwdlyf\>\"", ",", 
+     "\"\<glbombax\>\"", ",", "\"\<glefbs\>\"", ",", "\"\<gligktryff\>\"", 
+     ",", "\"\<glopb\>\"", ",", "\"\<gobblur\>\"", ",", "\"\<gokakyere\>\"", 
+     ",", "\"\<gokykaf\>\"", ",", "\"\<golan\>\"", ",", "\"\<golmen\>\"", 
+     ",", "\"\<goltarb\>\"", ",", "\"\<goltyne\>\"", ",", "\"\<golulte\>\"", 
+     ",", "\"\<goonve\>\"", ",", "\"\<goosk\>\"", ",", "\"\<gorcothe\>\"", 
+     ",", "\"\<goske\>\"", ",", "\"\<gotott\>\"", ",", "\"\<gowbatr\>\"", 
+     ",", "\"\<grithli\>\"", ",", "\"\<gromhol\>\"", ",", "\"\<grypart\>\"", 
+     ",", "\"\<gryssee\>\"", ",", "\"\<gtoper\>\"", ",", "\"\<guill\>\"", 
+     ",", "\"\<gulbuzed\>\"", ",", "\"\<gussley\>\"", ",", "\"\<gynukup\>\"", 
+     ",", "\"\<gyuxa\>\"", ",", "\"\<hacatos\>\"", ",", "\"\<hadpec\>\"", 
+     ",", "\"\<hagnele\>\"", ",", "\"\<hainfa\>\"", ",", "\"\<halpiviu\>\"", 
+     ",", "\"\<hanuor\>\"", ",", "\"\<hatboell\>\"", ",", "\"\<hatcoos\>\"", 
+     ",", "\"\<hatdtemre\>\"", ",", "\"\<hattlot\>\"", ",", "\"\<hearoe\>\"", 
+     ",", "\"\<heaunr\>\"", ",", "\"\<helope\>\"", ",", "\"\<hengole\>\"", 
+     ",", "\"\<heponp\>\"", ",", "\"\<herriton\>\"", ",", "\"\<herti\>\"", 
+     ",", "\"\<heupnyn\>\"", ",", "\"\<hewix\>\"", ",", "\"\<hinosle\>\"", 
+     ",", "\"\<hinpalol\>\"", ",", "\"\<hinpe\>\"", ",", "\"\<hion\>\"", ",", 
+     "\"\<hlilet\>\"", ",", "\"\<hloodor\>\"", ",", "\"\<hoker\>\"", ",", 
+     "\"\<holpher\>\"", ",", "\"\<hooshaj\>\"", ",", "\"\<hotivo\>\"", ",", 
+     "\"\<hovvile\>\"", ",", "\"\<howtinne\>\"", ",", "\"\<hroos\>\"", ",", 
+     "\"\<hrorpen\>\"", ",", "\"\<hudtont\>\"", ",", "\"\<humod\>\"", ",", 
+     "\"\<hurstat\>\"", ",", "\"\<hutboo\>\"", ",", "\"\<hylwut\>\"", ",", 
+     "\"\<iatly\>\"", ",", "\"\<iglangyo\>\"", ",", "\"\<iicye\>\"", ",", 
+     "\"\<iitlos\>\"", ",", "\"\<incleur\>\"", ",", "\"\<indolun\>\"", ",", 
+     "\"\<inkaro\>\"", ",", "\"\<irkelig\>\"", ",", "\"\<ispy\>\"", ",", 
+     "\"\<jambya\>\"", ",", "\"\<jeoli\>\"", ",", "\"\<jerle\>\"", ",", 
+     "\"\<jihqom\>\"", ",", "\"\<jindiol\>\"", ",", "\"\<jinol\>\"", ",", 
+     "\"\<jinze\>\"", ",", "\"\<Jugoa\>\"", ",", "\"\<kagrecu\>\"", ",", 
+     "\"\<kariloxu\>\"", ",", "\"\<karshrer\>\"", ",", "\"\<keinsut\>\"", 
+     ",", "\"\<kemsdit\>\"", ",", "\"\<kenc\>\"", ",", "\"\<kergen\>\"", ",", 
+     "\"\<khapnaty\>\"", ",", "\"\<khol\>\"", ",", "\"\<kigegeo\>\"", ",", 
+     "\"\<kiinlf\>\"", ",", "\"\<killad\>\"", ",", "\"\<kinn\>\"", ",", 
+     "\"\<kinskya\>\"", ",", "\"\<kinulgun\>\"", ",", "\"\<klagctur\>\"", 
+     ",", "\"\<konbene\>\"", ",", "\"\<kreexty\>\"", ",", "\"\<ksonmao\>\"", 
+     ",", "\"\<kuiry\>\"", ",", "\"\<kulgit\>\"", ",", "\"\<kuttela\>\"", 
+     ",", "\"\<kyosn\>\"", ",", "\"\<lahid\>\"", ",", "\"\<lallise\>\"", ",", 
+     "\"\<laniy\>\"", ",", "\"\<lanpipe\>\"", ",", "\"\<laspen\>\"", ",", 
+     "\"\<lediun\>\"", ",", "\"\<legome\>\"", ",", "\"\<legtawz\>\"", ",", 
+     "\"\<lekinog\>\"", ",", "\"\<lengre\>\"", ",", "\"\<lepdyu\>\"", ",", 
+     "\"\<lewdyar\>\"", ",", "\"\<lhemotine\>\"", ",", "\"\<lich\>\"", ",", 
+     "\"\<lickie\>\"", ",", "\"\<licnanor\>\"", ",", "\"\<lidora\>\"", ",", 
+     "\"\<lieatletr\>\"", ",", "\"\<ligslis\>\"", ",", "\"\<likrly\>\"", ",", 
+     "\"\<lincyy\>\"", ",", "\"\<lisin\>\"", ",", "\"\<litagky\>\"", ",", 
+     "\"\<litanme\>\"", ",", "\"\<llelca\>\"", ",", "\"\<logoman\>\"", ",", 
+     "\"\<lowgy\>\"", ",", "\"\<lucliacdy\>\"", ",", "\"\<ludtee\>\"", ",", 
+     "\"\<luifnly\>\"", ",", "\"\<luroro\>\"", ",", "\"\<lusr\>\"", ",", 
+     "\"\<lwefu\>\"", ",", "\"\<lyedu\>\"", ",", "\"\<macita\>\"", ",", 
+     "\"\<madipl\>\"", ",", "\"\<mahyyn\>\"", ",", "\"\<mailga\>\"", ",", 
+     "\"\<malkgume\>\"", ",", "\"\<malsnea\>\"", ",", "\"\<mamgliar\>\"", 
+     ",", "\"\<mamush\>\"", ",", "\"\<mamyy\>\"", ",", "\"\<maneahe\>\"", 
+     ",", "\"\<mannun\>\"", ",", "\"\<manpey\>\"", ",", "\"\<mapol\>\"", ",", 
+     "\"\<mariye\>\"", ",", "\"\<martosr\>\"", ",", "\"\<maste\>\"", ",", 
+     "\"\<matunok\>\"", ",", "\"\<matwe\>\"", ",", "\"\<mebalty\>\"", ",", 
+     "\"\<mecshelo\>\"", ",", "\"\<medansot\>\"", ",", "\"\<medefe\>\"", ",", 
+     "\"\<meega\>\"", ",", "\"\<meich\>\"", ",", "\"\<melach\>\"", ",", 
+     "\"\<melege\>\"", ",", "\"\<menilar\>\"", ",", "\"\<meoey\>\"", ",", 
+     "\"\<merony\>\"", ",", "\"\<metpote\>\"", ",", "\"\<metrun\>\"", ",", 
+     "\"\<mezeabi\>\"", ",", "\"\<midacsol\>\"", ",", "\"\<Milaf\>\"", ",", 
+     "\"\<misgrope\>\"", ",", "\"\<mislat\>\"", ",", "\"\<misnee\>\"", ",", 
+     "\"\<mitorun\>\"", ",", "\"\<mitosna\>\"", ",", "\"\<mobsty\>\"", ",", 
+     "\"\<molmisr\>\"", ",", "\"\<mootdeed\>\"", ",", "\"\<mopsnyo\>\"", ",", 
+     "\"\<moqhey\>\"", ",", "\"\<morue\>\"", ",", "\"\<movan\>\"", ",", 
+     "\"\<mowbiuge\>\"", ",", "\"\<mradoald\>\"", ",", "\"\<mrati\>\"", ",", 
+     "\"\<mrecere\>\"", ",", "\"\<mrepin\>\"", ",", "\"\<mriscin\>\"", ",", 
+     "\"\<mucheot\>\"", ",", "\"\<mumpa\>\"", ",", "\"\<mutk\>\"", ",", 
+     "\"\<myqeilla\>\"", ",", "\"\<nactath\>\"", ",", "\"\<nakimg\>\"", ",", 
+     "\"\<nakogon\>\"", ",", "\"\<neefre\>\"", ",", "\"\<negocods\>\"", ",", 
+     "\"\<nescee\>\"", ",", "\"\<nete\>\"", ",", "\"\<netrepir\>\"", ",", 
+     "\"\<nindug\>\"", ",", "\"\<nloty\>\"", ",", "\"\<nokunyd\>\"", ",", 
+     "\"\<noskil\>\"", ",", "\"\<noum\>\"", ",", "\"\<npinklat\>\"", ",", 
+     "\"\<nunlar\>\"", ",", "\"\<obasowo\>\"", ",", "\"\<oburon\>\"", ",", 
+     "\"\<ochicle\>\"", ",", "\"\<ocruste\>\"", ",", "\"\<olllyt\>\"", ",", 
+     "\"\<olzolorf\>\"", ",", "\"\<omionn\>\"", ",", "\"\<oqaiple\>\"", ",", 
+     "\"\<oroal\>\"", ",", "\"\<orokae\>\"", ",", "\"\<oteoo\>\"", ",", 
+     "\"\<ovantl\>\"", ",", "\"\<oxdeos\>\"", ",", "\"\<pafrua\>\"", ",", 
+     "\"\<pagelo\>\"", ",", "\"\<pagkyr\>\"", ",", "\"\<pakios\>\"", ",", 
+     "\"\<pancuzu\>\"", ",", "\"\<panme\>\"", ",", "\"\<panped\>\"", ",", 
+     "\"\<panzord\>\"", ",", "\"\<parhoo\>\"", ",", "\"\<parne\>\"", ",", 
+     "\"\<parulu\>\"", ",", "\"\<patoep\>\"", ",", "\"\<paurele\>\"", ",", 
+     "\"\<paursbeu\>\"", ",", "\"\<pedle\>\"", ",", "\"\<pekpadyel\>\"", ",", 
+     "\"\<pelok\>\"", ",", "\"\<peloo\>\"", ",", "\"\<pelti\>\"", ",", 
+     "\"\<perfotine\>\"", ",", "\"\<perioni\>\"", ",", "\"\<perpluur\>\"", 
+     ",", "\"\<perre\>\"", ",", "\"\<perukaut\>\"", ",", "\"\<perxis\>\"", 
+     ",", "\"\<petpy\>\"", ",", "\"\<pevitrat\>\"", ",", "\"\<pgotkry\>\"", 
+     ",", "\"\<phine\>\"", ",", "\"\<phinkhu\>\"", ",", "\"\<piblobed\>\"", 
+     ",", "\"\<picbopy\>\"", ",", "\"\<pidpe\>\"", ",", "\"\<pileg\>\"", ",", 
+     "\"\<pileon\>\"", ",", "\"\<piloonjo\>\"", ",", "\"\<pinkoot\>\"", ",", 
+     "\"\<piwtee\>\"", ",", "\"\<plante\>\"", ",", "\"\<pliton\>\"", ",", 
+     "\"\<plondae\>\"", ",", "\"\<plukiz\>\"", ",", "\"\<pniposo\>\"", ",", 
+     "\"\<poborise\>\"", ",", "\"\<pogoto\>\"", ",", "\"\<poltisk\>\"", ",", 
+     "\"\<poltonze\>\"", ",", "\"\<polwes\>\"", ",", "\"\<ponamhe\>\"", ",", 
+     "\"\<poona\>\"", ",", "\"\<poptrish\>\"", ",", "\"\<porear\>\"", ",", 
+     "\"\<posfy\>\"", ",", "\"\<powtreehre\>\"", ",", "\"\<preundar\>\"", 
+     ",", "\"\<prok\>\"", ",", "\"\<prula\>\"", ",", "\"\<ptontusu\>\"", ",", 
+     "\"\<pucir\>\"", ",", "\"\<pyunl\>\"", ",", "\"\<qagili\>\"", ",", 
+     "\"\<qegik\>\"", ",", "\"\<qiafllye\>\"", ",", "\"\<qoisoosa\>\"", ",", 
+     "\"\<qualtya\>\"", ",", "\"\<rachorsl\>\"", ",", "\"\<raghea\>\"", ",", 
+     "\"\<rakhankka\>\"", ",", "\"\<rakllet\>\"", ",", "\"\<raminte\>\"", 
+     ",", "\"\<ranot\>\"", ",", "\"\<rapela\>\"", ",", "\"\<raponi\>\"", ",", 
+     "\"\<rashimat\>\"", ",", "\"\<rebaron\>\"", ",", "\"\<rekladal\>\"", 
+     ",", "\"\<renchan\>\"", ",", "\"\<reswyro\>\"", ",", "\"\<revocp\>\"", 
+     ",", "\"\<rilkon\>\"", ",", "\"\<rinty\>\"", ",", "\"\<riuciny\>\"", 
+     ",", "\"\<rogontun\>\"", ",", "\"\<rohint\>\"", ",", "\"\<roiflob\>\"", 
+     ",", "\"\<rolea\>\"", ",", "\"\<roskock\>\"", ",", "\"\<roum\>\"", ",", 
+     "\"\<rrrina\>\"", ",", "\"\<rtoibrie\>\"", ",", "\"\<rucroob\>\"", ",", 
+     "\"\<rukkyg\>\"", ",", "\"\<runtooj\>\"", ",", "\"\<ryabhoo\>\"", ",", 
+     "\"\<rynt\>\"", ",", "\"\<sagtled\>\"", ",", "\"\<saleaf\>\"", ",", 
+     "\"\<salere\>\"", ",", "\"\<samrete\>\"", ",", "\"\<sanaun\>\"", ",", 
+     "\"\<sank\>\"", ",", "\"\<saplet\>\"", ",", "\"\<sarno\>\"", ",", 
+     "\"\<sarom\>\"", ",", "\"\<sba\>\"", ",", "\"\<sbarwos\>\"", ",", 
+     "\"\<sblat\>\"", ",", "\"\<scedeeb\>\"", ",", "\"\<schanlear\>\"", ",", 
+     "\"\<schunpe\>\"", ",", "\"\<scinaeo\>\"", ",", "\"\<sclodor\>\"", ",", 
+     "\"\<sderte\>\"", ",", "\"\<secluly\>\"", ",", "\"\<sekipk\>\"", ",", 
+     "\"\<selatl\>\"", ",", "\"\<selean\>\"", ",", "\"\<semot\>\"", ",", 
+     "\"\<senon\>\"", ",", "\"\<senwe\>\"", ",", "\"\<sereer\>\"", ",", 
+     "\"\<sertantk\>\"", ",", "\"\<sexipe\>\"", ",", "\"\<seyged\>\"", ",", 
+     "\"\<sfentin\>\"", ",", "\"\<shaig\>\"", ",", "\"\<shalbokn\>\"", ",", 
+     "\"\<sharkupf\>\"", ",", "\"\<sheenig\>\"", ",", "\"\<shercod\>\"", ",", 
+     "\"\<shewoor\>\"", ",", "\"\<shiarty\>\"", ",", "\"\<shinvud\>\"", ",", 
+     "\"\<shitbtre\>\"", ",", "\"\<shitloo\>\"", ",", "\"\<shokon\>\"", ",", 
+     "\"\<shoyp\>\"", ",", "\"\<shrupl\>\"", ",", "\"\<shtengre\>\"", ",", 
+     "\"\<shyata\>\"", ",", "\"\<shydote\>\"", ",", "\"\<sicacor\>\"", ",", 
+     "\"\<silea\>\"", ",", "\"\<sillauuu\>\"", ",", "\"\<sinlyu\>\"", ",", 
+     "\"\<sitlam\>\"", ",", "\"\<skauntpu\>\"", ",", "\"\<skilmen\>\"", ",", 
+     "\"\<sklich\>\"", ",", "\"\<skork\>\"", ",", "\"\<skotwasza\>\"", ",", 
+     "\"\<skrote\>\"", ",", "\"\<slafpyy\>\"", ",", "\"\<slalcy\>\"", ",", 
+     "\"\<slanine\>\"", ",", "\"\<slankuh\>\"", ",", "\"\<slapilo\>\"", ",", 
+     "\"\<slest\>\"", ",", "\"\<slimchy\>\"", ",", "\"\<slinth\>\"", ",", 
+     "\"\<sllelda\>\"", ",", "\"\<sluf\>\"", ",", "\"\<smarmuti\>\"", ",", 
+     "\"\<smawil\>\"", ",", "\"\<smikpe\>\"", ",", "\"\<sn\>\"", ",", 
+     "\"\<sncilhye\>\"", ",", "\"\<snfarty\>\"", ",", "\"\<snordin\>\"", ",", 
+     "\"\<snusk\>\"", ",", "\"\<sobawl\>\"", ",", "\"\<sodard\>\"", ",", 
+     "\"\<sohart\>\"", ",", "\"\<soliw\>\"", ",", "\"\<sorbroni\>\"", ",", 
+     "\"\<soskeo\>\"", ",", "\"\<sososdosw\>\"", ",", "\"\<sowo\>\"", ",", 
+     "\"\<spegte\>\"", ",", "\"\<speleeo\>\"", ",", "\"\<spexl\>\"", ",", 
+     "\"\<spopal\>\"", ",", "\"\<spylpon\>\"", ",", "\"\<spyltou\>\"", ",", 
+     "\"\<sqaaev\>\"", ",", "\"\<srhaan\>\"", ",", "\"\<srirel\>\"", ",", 
+     "\"\<ssinfu\>\"", ",", "\"\<ssswslee\>\"", ",", "\"\<sstleu\>\"", ",", 
+     "\"\<stamyam\>\"", ",", "\"\<staono\>\"", ",", "\"\<starpel\>\"", ",", 
+     "\"\<starten\>\"", ",", "\"\<stasteom\>\"", ",", "\"\<staucbhef\>\"", 
+     ",", "\"\<stew\>\"", ",", "\"\<stleiny\>\"", ",", "\"\<stlon\>\"", ",", 
+     "\"\<storset\>\"", ",", "\"\<stule\>\"", ",", "\"\<subla\>\"", ",", 
+     "\"\<suflas\>\"", ",", "\"\<sulatak\>\"", ",", "\"\<sulyflu\>\"", ",", 
+     "\"\<sun\>\"", ",", "\"\<sungao\>\"", ",", "\"\<sunky\>\"", ",", 
+     "\"\<swawdh\>\"", ",", "\"\<sweinf\>\"", ",", "\"\<swelde\>\"", ",", 
+     "\"\<swenlee\>\"", ",", "\"\<swingy\>\"", ",", "\"\<swlant\>\"", ",", 
+     "\"\<swortu\>\"", ",", "\"\<swotte\>\"", ",", "\"\<swyedax\>\"", ",", 
+     "\"\<sxeenje\>\"", ",", "\"\<syarrax\>\"", ",", "\"\<talankem\>\"", ",", 
+     "\"\<tanegaut\>\"", ",", "\"\<tanfhe\>\"", ",", "\"\<tanno\>\"", ",", 
+     "\"\<tatharne\>\"", ",", "\"\<teaflkur\>\"", ",", "\"\<telego\>\"", ",", 
+     "\"\<teloch\>\"", ",", "\"\<teron\>\"", ",", "\"\<tgogne\>\"", ",", 
+     "\"\<thetne\>\"", ",", "\"\<tholope\>\"", ",", "\"\<tidzyoy\>\"", ",", 
+     "\"\<tigeltyg\>\"", ",", "\"\<tiulo\>\"", ",", "\"\<tlawuly\>\"", ",", 
+     "\"\<tleapie\>\"", ",", "\"\<tleapye\>\"", ",", "\"\<tlilke\>\"", ",", 
+     "\"\<tlokut\>\"", ",", "\"\<toboop\>\"", ",", "\"\<tolovis\>\"", ",", 
+     "\"\<tonene\>\"", ",", "\"\<tontolefn\>\"", ",", "\"\<topuro\>\"", ",", 
+     "\"\<toreen\>\"", ",", "\"\<toreosno\>\"", ",", "\"\<tosiley\>\"", ",", 
+     "\"\<totarix\>\"", ",", "\"\<tourlqaa\>\"", ",", "\"\<trabhok\>\"", ",", 
+     "\"\<train\>\"", ",", "\"\<trandaill\>\"", ",", "\"\<treenune\>\"", ",", 
+     "\"\<tremonv\>\"", ",", "\"\<trgopy\>\"", ",", "\"\<trigly\>\"", ",", 
+     "\"\<trokron\>\"", ",", "\"\<tronkeu\>\"", ",", "\"\<tropben\>\"", ",", 
+     "\"\<troran\>\"", ",", "\"\<trowfe\>\"", ",", "\"\<trur\>\"", ",", 
+     "\"\<tryne\>\"", ",", "\"\<tspaku\>\"", ",", "\"\<tuislu\>\"", ",", 
+     "\"\<tunlyu\>\"", ",", "\"\<turpa\>\"", ",", "\"\<tursee\>\"", ",", 
+     "\"\<tvagel\>\"", ",", "\"\<twyfour\>\"", ",", "\"\<tyee\>\"", ",", 
+     "\"\<tylakods\>\"", ",", "\"\<tyretele\>\"", ",", "\"\<tzeilee\>\"", 
+     ",", "\"\<ukrefn\>\"", ",", "\"\<uktlel\>\"", ",", "\"\<ullass\>\"", 
+     ",", "\"\<ulwaron\>\"", ",", "\"\<uman\>\"", ",", "\"\<umjadl\>\"", ",", 
+     "\"\<umwlu\>\"", ",", "\"\<unbuere\>\"", ",", "\"\<unleon\>\"", ",", 
+     "\"\<urle\>\"", ",", "\"\<usky\>\"", ",", "\"\<uwsice\>\"", ",", 
+     "\"\<uxkrotz\>\"", ",", "\"\<vabgoon\>\"", ",", "\"\<vabileo\>\"", ",", 
+     "\"\<vafka\>\"", ",", "\"\<vant\>\"", ",", "\"\<veeskun\>\"", ",", 
+     "\"\<verefrrtot\>\"", ",", "\"\<vetiny\>\"", ",", "\"\<vgyliyd\>\"", 
+     ",", "\"\<vhlisnye\>\"", ",", "\"\<viaqulo\>\"", ",", "\"\<vifhy\>\"", 
+     ",", "\"\<villitu\>\"", ",", "\"\<virelan\>\"", ",", "\"\<vislok\>\"", 
+     ",", "\"\<vivllyer\>\"", ",", "\"\<viwbc\>\"", ",", "\"\<vnatale\>\"", 
+     ",", "\"\<voelim\>\"", ",", "\"\<vogmets\>\"", ",", "\"\<vosvypy\>\"", 
+     ",", "\"\<vrcohaty\>\"", ",", "\"\<vrotane\>\"", ",", "\"\<wagnung\>\"", 
+     ",", "\"\<wanodige\>\"", ",", "\"\<welepyy\>\"", ",", "\"\<welin\>\"", 
+     ",", "\"\<wenat\>\"", ",", "\"\<wiclel\>\"", ",", "\"\<wilogar\>\"", 
+     ",", "\"\<wintu\>\"", ",", "\"\<wixpul\>\"", ",", "\"\<wliden\>\"", ",", 
+     "\"\<wodpill\>\"", ",", "\"\<wogthen\>\"", ",", "\"\<woitluo\>\"", ",", 
+     "\"\<wokdalh\>\"", ",", "\"\<wolchisg\>\"", ",", "\"\<woncle\>\"", ",", 
+     "\"\<wote\>\"", ",", "\"\<wotelte\>\"", ",", "\"\<wotlot\>\"", ",", 
+     "\"\<wotte\>\"", ",", "\"\<wrinf\>\"", ",", "\"\<wrolole\>\"", ",", 
+     "\"\<wypsyr\>\"", ",", "\"\<wyun\>\"", ",", "\"\<xanc\>\"", ",", 
+     "\"\<xeabka\>\"", ",", "\"\<xeikmu\>\"", ",", "\"\<xigkakot\>\"", ",", 
+     "\"\<xust\>\"", ",", "\"\<xwoayd\>\"", ",", "\"\<yagten\>\"", ",", 
+     "\"\<yeled\>\"", ",", "\"\<yigok\>\"", ",", "\"\<ylachar\>\"", ",", 
+     "\"\<ymaga\>\"", ",", "\"\<ynafo\>\"", ",", "\"\<ynoapa\>\"", ",", 
+     "\"\<yranalan\>\"", ",", "\"\<yranleira\>\"", ",", "\"\<yrltoen\>\"", 
+     ",", "\"\<ytdastun\>\"", ",", "\"\<zanke\>\"", ",", "\"\<zelpauagze\>\"",
+      ",", "\"\<zinom\>\"", ",", "\"\<zolao\>\"", ",", "\"\<zoleosn\>\"", 
+     ",", "\"\<zoricen\>\"", ",", "\"\<zramlule\>\"", ",", 
+     "\"\<zwusdee\>\""}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.802799128449501*^9, 3.802799153306163*^9}},
+ CellLabel->
+  "In[1138]:=",ExpressionUUID->"d96ff27c-9fe0-42a0-97a0-65dc5bdcd416"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "@", 
+  RowBox[{"Flatten", "@", 
+   RowBox[{"ToLowerCase", "@", 
+    RowBox[{"Characters", "@", "generatedNames"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.802799156401174*^9, 3.802799215443385*^9}},
+ CellLabel->
+  "In[1178]:=",ExpressionUUID->"e85149fc-0a6e-49ac-a3b1-24378752679c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"a\"\>", ",", "\<\"b\"\>", ",", "\<\"c\"\>", ",", "\<\"d\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"f\"\>", ",", "\<\"g\"\>", ",", "\<\"h\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"j\"\>", ",", "\<\"k\"\>", ",", "\<\"l\"\>", 
+   ",", "\<\"m\"\>", ",", "\<\"n\"\>", ",", "\<\"o\"\>", ",", "\<\"p\"\>", 
+   ",", "\<\"q\"\>", ",", "\<\"r\"\>", ",", "\<\"s\"\>", ",", "\<\"t\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\"v\"\>", ",", "\<\"w\"\>", ",", "\<\"x\"\>", 
+   ",", "\<\"y\"\>", ",", "\<\"z\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8027991601392183`*^9, 3.802799215674221*^9}, 
+   3.802800260642549*^9},
+ CellLabel->
+  "Out[1178]=",ExpressionUUID->"180266ee-8e97-47ce-a202-9af92ac4bf24"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pokemon", "=", 
+   RowBox[{"EntityValue", "[", 
+    RowBox[{
+     RowBox[{"EntityList", "[", "\"\<Pokemon\>\"", "]"}], ",", 
+     "\"\<Name\>\""}], "]"}]}], ";"}]], "Input",
+ CellLabel->
+  "In[1160]:=",ExpressionUUID->"4bac3940-df80-402f-b62b-191e97bd4c32"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pokemon", "=", 
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"pokemon", ",", 
+       RowBox[{
+        RowBox[{"StringMatchQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"CharacterRange", "[", 
+            RowBox[{"\"\<A\>\"", ",", "\"\<z\>\""}], "]"}], ".."}]}], "]"}], 
+        "&"}]}], "]"}], " ", "//", " ", "ToLowerCase"}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.802799260784639*^9, {3.8028000511241693`*^9, 
+   3.8028000757437162`*^9}},ExpressionUUID->"0d2ec262-923a-4e03-9c18-\
+d646fbb5863c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"generatedNames", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{"generatedNames", ",", 
+      RowBox[{
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"CharacterRange", "[", 
+           RowBox[{"\"\<A\>\"", ",", "\"\<z\>\""}], "]"}], ".."}]}], "]"}], 
+       "&"}]}], "]"}], " ", "//", " ", "ToLowerCase"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.802800304867774*^9, 3.802800311363975*^9}},
+ CellLabel->
+  "In[1179]:=",ExpressionUUID->"cd08fa52-fef5-4eaf-a265-f5e24c781f00"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "@", 
+  RowBox[{"Flatten", "@", 
+   RowBox[{"Characters", "@", "generatedNames"}]}]}]], "Input",
+ CellChangeTimes->{{3.8028003151956244`*^9, 3.8028003334641113`*^9}},
+ CellLabel->
+  "In[1183]:=",ExpressionUUID->"a4e1eef4-5788-47f4-b7f7-438ce9f659f8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"a\"\>", ",", "\<\"b\"\>", ",", "\<\"c\"\>", ",", "\<\"d\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"f\"\>", ",", "\<\"g\"\>", ",", "\<\"h\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"j\"\>", ",", "\<\"k\"\>", ",", "\<\"l\"\>", 
+   ",", "\<\"m\"\>", ",", "\<\"n\"\>", ",", "\<\"o\"\>", ",", "\<\"p\"\>", 
+   ",", "\<\"q\"\>", ",", "\<\"r\"\>", ",", "\<\"s\"\>", ",", "\<\"t\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\"v\"\>", ",", "\<\"w\"\>", ",", "\<\"x\"\>", 
+   ",", "\<\"y\"\>", ",", "\<\"z\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.802800316156835*^9, 3.802800333775489*^9}},
+ CellLabel->
+  "Out[1183]=",ExpressionUUID->"d82f94a4-8b2e-47e0-aade-a5949c2827b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "@", 
+  RowBox[{"Flatten", "@", 
+   RowBox[{"ToLowerCase", "@", 
+    RowBox[{"Characters", "@", "pokemon"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.80279927117872*^9, 3.802799276156892*^9}},
+ CellLabel->
+  "In[1103]:=",ExpressionUUID->"d7004f4b-d806-4837-839f-31cc9bbc3079"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"a\"\>", ",", "\<\"b\"\>", ",", "\<\"c\"\>", ",", "\<\"d\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"f\"\>", ",", "\<\"g\"\>", ",", "\<\"h\"\>", 
+   ",", "\<\"i\"\>", ",", "\<\"j\"\>", ",", "\<\"k\"\>", ",", "\<\"l\"\>", 
+   ",", "\<\"m\"\>", ",", "\<\"n\"\>", ",", "\<\"o\"\>", ",", "\<\"p\"\>", 
+   ",", "\<\"q\"\>", ",", "\<\"r\"\>", ",", "\<\"s\"\>", ",", "\<\"t\"\>", 
+   ",", "\<\"u\"\>", ",", "\<\"v\"\>", ",", "\<\"w\"\>", ",", "\<\"x\"\>", 
+   ",", "\<\"y\"\>", ",", "\<\"z\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8027992723062887`*^9, 3.802799276412654*^9}},
+ CellLabel->
+  "Out[1103]=",ExpressionUUID->"ead22c88-9c33-4a3f-8790-2c7bd9a9a935"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gram", "[", 
+   RowBox[{"n_", ",", "wordlist_"}], "]"}], ":=", " ", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Partition", "[", 
+        RowBox[{"#", ",", "n", ",", "1"}], "]"}], "&"}], ")"}], "/@", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", "StartOfString", "}"}], ",", 
+          RowBox[{"Characters", "[", "#", "]"}], ",", 
+          RowBox[{"{", "EndOfString", "}"}]}], "]"}], "&"}], ")"}], "/@", 
+      "wordlist"}]}], ",", "1"}], "]"}]}]], "Input",
+ CellLabel->
+  "In[1115]:=",ExpressionUUID->"997f0bd4-065a-445e-9188-72889e0c132c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "generatedNames"}]], "Input",
+ CellChangeTimes->{{3.802799307454616*^9, 3.802799313148642*^9}},
+ CellLabel->
+  "In[1155]:=",ExpressionUUID->"9a86d4a7-1c68-4c83-b1e9-bc4374d7611d"],
+
+Cell[BoxData["835"], "Output",
+ CellChangeTimes->{3.80279931344841*^9, 3.8028000209790697`*^9},
+ CellLabel->
+  "Out[1155]=",ExpressionUUID->"d2beea9d-3d88-40cd-b541-940994b761e0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Length", "@", "pokemon"}]}]], "Input",
+ CellChangeTimes->{{3.802799314864272*^9, 3.802799345896027*^9}, {
+  3.802800025577817*^9, 3.802800038193407*^9}},
+ CellLabel->
+  "In[1165]:=",ExpressionUUID->"0802f351-075e-4951-8676-47980ce56a5d"],
+
+Cell[BoxData["835"], "Output",
+ CellChangeTimes->{{3.802799346093636*^9, 3.802799367978264*^9}, {
+   3.802800022384225*^9, 3.80280004679991*^9}, 3.802800078689967*^9},
+ CellLabel->
+  "Out[1165]=",ExpressionUUID->"46c581de-3860-456a-b6f7-29a0c285481c"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", " ", "=", " ", 
+   RowBox[{"KeySort", "@", 
+    RowBox[{"Counts", "@", 
+     RowBox[{"gram", "[", 
+      RowBox[{"2", ",", "pokemon"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", " ", "=", " ", 
+   RowBox[{"KeySort", "@", 
+    RowBox[{"Counts", "@", 
+     RowBox[{"gram", "[", 
+      RowBox[{"2", ",", "generatedNames"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tuples", "[", 
+    RowBox[{
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"Alphabet", "[", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"StartOfString", ",", "EndOfString"}], "}"}]}], "]"}], ",", 
+     "2"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.802799376068021*^9, 3.802799418923523*^9}, {
+   3.8028011048264236`*^9, 3.802801114001128*^9}, {3.802801174613282*^9, 
+   3.802801220055295*^9}, {3.802801274477257*^9, 3.802801283993416*^9}, {
+   3.802801357616499*^9, 3.80280144964503*^9}, 3.8028024323894444`*^9},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"d7c297e7-384f-4004-9fbf-455bed1d89c6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"z1", " ", "=", " ", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", "=", 
+       RowBox[{"Alphabet", "[", "]"}]}], "}"}], ",", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"StartOfString", ",", "#"}], "}"}], "&"}], "/@", "a"}], ",", 
+       RowBox[{"Tuples", "[", 
+        RowBox[{"a", ",", "2"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"#", ",", "EndOfString"}], "}"}], "&"}], "/@", "a"}]}], 
+      "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.80280147284127*^9, 3.802801489353656*^9}, {
+   3.802801585285077*^9, 3.802801586737319*^9}, 3.802801633282359*^9, {
+   3.802801726141625*^9, 3.802801750068364*^9}},
+ NumberMarks->False,
+ CellLabel->
+  "In[1236]:=",ExpressionUUID->"d57f3286-f491-4619-90d7-b90319fe0ebc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"zx", " ", "=", " ", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{"0", "&"}], ",", 
+       RowBox[{"Counts", "@", "z1"}]}], "]"}], ",", "x"}], "|>"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.80280173069923*^9, 3.802801772777933*^9}, {
+   3.802801855657172*^9, 3.802801877551669*^9}, 3.80280193779636*^9, {
+   3.802802023649762*^9, 3.8028020243646107`*^9}},
+ NumberMarks->False,
+ CellLabel->
+  "In[1241]:=",ExpressionUUID->"60e50cf3-5889-4054-a938-4b15d7a5c705"],
+
+Cell[BoxData[
+ RowBox[{"EuclideanDistance", "@@", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Values", "@", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"AssociationMap", "[", 
+         RowBox[{
+          RowBox[{"0", "&"}], ",", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<EndOfString\>\"", ",", "\"\<StartOfString\>\""}], 
+             "}"}], ",", 
+            RowBox[{"Tuples", "[", 
+             RowBox[{
+              RowBox[{"Alphabet", "[", "]"}], ",", "2"}], "]"}]}], "]"}]}], 
+         "]"}], ",", "#"}], "|>"}]}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.80280194142554*^9, 
+  3.802801941433268*^9}},ExpressionUUID->"feb881a3-b2b6-4b1c-81be-\
+010e88d4e279"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"zy", " ", "=", " ", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{"0", "&"}], ",", 
+         RowBox[{"Counts", "@", "z1"}]}], "]"}], ",", "y"}], "|>"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"BarChart3D", "[", 
+    RowBox[{"zy", ",", " ", 
+     RowBox[{"ChartLabels", "\[Rule]", 
+      RowBox[{"Flatten", "@", 
+       RowBox[{"Keys", "@", "zy"}]}]}]}], "]"}], " "}]}]], "Input",
+ CellChangeTimes->{{3.8028019865261793`*^9, 3.802801986919896*^9}, {
+  3.802802028669879*^9, 3.802802090098946*^9}, {3.802802126180863*^9, 
+  3.802802146194417*^9}, {3.802802231840629*^9, 3.802802249834391*^9}, {
+  3.8028022973494043`*^9, 3.802802364175604*^9}},
+ CellLabel->
+  "In[1270]:=",ExpressionUUID->"56bf3f59-d597-46ac-b0b1-c64dc4f63d15"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.802802448189459*^9, 
+  3.802802448323833*^9}},ExpressionUUID->"de9bcc0f-20ce-4d4f-abc6-\
+bd66a639a450"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EuclideanDistance", "[", 
+  RowBox[{
+   RowBox[{"Values", "@", "zy"}], ",", 
+   RowBox[{"Values", "[", "zx", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.802802147414091*^9, 3.8028021621101017`*^9}, {
+  3.8028024622811203`*^9, 3.802802475769514*^9}},
+ NumberMarks->False,
+ CellLabel->
+  "In[1275]:=",ExpressionUUID->"ff11a3f9-317b-4428-a282-f465e1ffd435"],
+
+Cell[BoxData[
+ SqrtBox["30777"]], "Output",
+ CellChangeTimes->{
+  3.8028021623537207`*^9, {3.8028024628298407`*^9, 3.802802476087837*^9}},
+ CellLabel->
+  "Out[1275]=",ExpressionUUID->"b536ed18-0ed1-4f59-b0bc-771a1e711d35"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  SqrtBox["30777"], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[1276]:=",ExpressionUUID->"7d97e10e-2202-4c93-bc99-02ad0b0861c6"],
+
+Cell[BoxData["175.43374817862156`"], "Output",
+ CellChangeTimes->{3.802802477680196*^9},
+ CellLabel->
+  "Out[1276]=",ExpressionUUID->"b901ece7-fa15-48f7-b3f1-bb88ff187522"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{316, Automatic}, {Automatic, 50}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (June 30, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4375f4a3-e9a8-49a8-a256-bbda414a4ccb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 21517, 287, 1270, "Input",ExpressionUUID->"d96ff27c-9fe0-42a0-97a0-65dc5bdcd416"],
+Cell[CellGroupData[{
+Cell[22100, 311, 313, 7, 30, "Input",ExpressionUUID->"e85149fc-0a6e-49ac-a3b1-24378752679c"],
+Cell[22416, 320, 723, 12, 34, "Output",ExpressionUUID->"180266ee-8e97-47ce-a202-9af92ac4bf24"]
+}, Open  ]],
+Cell[23154, 335, 292, 8, 30, "Input",ExpressionUUID->"4bac3940-df80-402f-b62b-191e97bd4c32"],
+Cell[23449, 345, 617, 18, 52, "Input",ExpressionUUID->"0d2ec262-923a-4e03-9c18-d646fbb5863c"],
+Cell[24069, 365, 585, 15, 30, "Input",ExpressionUUID->"cd08fa52-fef5-4eaf-a265-f5e24c781f00"],
+Cell[CellGroupData[{
+Cell[24679, 384, 282, 6, 30, "Input",ExpressionUUID->"a4e1eef4-5788-47f4-b7f7-438ce9f659f8"],
+Cell[24964, 392, 695, 11, 34, "Output",ExpressionUUID->"d82f94a4-8b2e-47e0-aade-a5949c2827b1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25696, 408, 305, 7, 30, "Input",ExpressionUUID->"d7004f4b-d806-4837-839f-31cc9bbc3079"],
+Cell[26004, 417, 697, 11, 34, "Output",ExpressionUUID->"ead22c88-9c33-4a3f-8790-2c7bd9a9a935"]
+}, Open  ]],
+Cell[26716, 431, 712, 21, 30, "Input",ExpressionUUID->"997f0bd4-065a-445e-9188-72889e0c132c"],
+Cell[CellGroupData[{
+Cell[27453, 456, 217, 4, 30, "Input",ExpressionUUID->"9a86d4a7-1c68-4c83-b1e9-bc4374d7611d"],
+Cell[27673, 462, 179, 3, 34, "Output",ExpressionUUID->"d2beea9d-3d88-40cd-b541-940994b761e0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27889, 470, 295, 6, 52, "Input",ExpressionUUID->"0802f351-075e-4951-8676-47980ce56a5d"],
+Cell[28187, 478, 251, 4, 34, "Output",ExpressionUUID->"46c581de-3860-456a-b6f7-29a0c285481c"]
+}, Open  ]],
+Cell[28453, 485, 1146, 31, 115, "Input",ExpressionUUID->"d7c297e7-384f-4004-9fbf-455bed1d89c6"],
+Cell[29602, 518, 910, 26, 30, "Input",ExpressionUUID->"d57f3286-f491-4619-90d7-b90319fe0ebc"],
+Cell[30515, 546, 542, 15, 30, "Input",ExpressionUUID->"60e50cf3-5889-4054-a938-4b15d7a5c705"],
+Cell[31060, 563, 820, 24, 30, "Input",ExpressionUUID->"feb881a3-b2b6-4b1c-81be-010e88d4e279"],
+Cell[31883, 589, 916, 22, 115, "Input",ExpressionUUID->"56bf3f59-d597-46ac-b0b1-c64dc4f63d15"],
+Cell[32802, 613, 152, 3, 30, InheritFromParent,ExpressionUUID->"de9bcc0f-20ce-4d4f-abc6-bd66a639a450"],
+Cell[CellGroupData[{
+Cell[32979, 620, 382, 9, 30, "Input",ExpressionUUID->"ff11a3f9-317b-4428-a282-f465e1ffd435"],
+Cell[33364, 631, 222, 5, 35, "Output",ExpressionUUID->"b536ed18-0ed1-4f59-b0bc-771a1e711d35"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33623, 641, 175, 5, 38, "Input",ExpressionUUID->"7d97e10e-2202-4c93-bc99-02ad0b0861c6"],
+Cell[33801, 648, 172, 3, 34, "Output",ExpressionUUID->"b901ece7-fa15-48f7-b3f1-bb88ff187522"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
