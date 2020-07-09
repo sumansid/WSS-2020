@@ -10,20 +10,20 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14004,        341]
-NotebookOptionsPosition[     12252,        304]
-NotebookOutlinePosition[     12648,        320]
-CellTagsIndexPosition[     12605,        317]
+NotebookDataLength[     14335,        355]
+NotebookOptionsPosition[     12359,        314]
+NotebookOutlinePosition[     12755,        330]
+CellTagsIndexPosition[     12712,        327]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Psuedo Word Generation using GANs", "Title",
+Cell["Pseudo Word Generation using GANs", "Title",
  CellChangeTimes->{{3.803163156102303*^9, 3.803163164725358*^9}, {
-  3.803296680729536*^9, 
-  3.80329668596796*^9}},ExpressionUUID->"e99076f0-2d1d-4573-9c30-\
+   3.803296680729536*^9, 3.80329668596796*^9}, 
+   3.803298408060699*^9},ExpressionUUID->"e99076f0-2d1d-4573-9c30-\
 23f3c885aa1e"],
 
 Cell["", "Author",
@@ -54,31 +54,29 @@ zero sum game in a sense that when the discriminator successfully classifies \
 real and fake samples, it is rewarded with no updates made to the model \
 parameters, however the generator is penalized with large updates. Similarly, \
 when the generator generates plausible examples, only the discriminator\
-\[CloseCurlyQuote]s parameters are updated.\nMost commonly known application \
-of GANs is image translation, generation of deep fakes and data augmentation. \
-\n\nIn this project, I will be applying GANs for text generation and will be \
-comparing the results with existing Recurrent Neural Networks. This post is \
-divided into"
+\[CloseCurlyQuote]s parameters are updated.\nLarge amount of research have \
+been done with GANs for image translation, generation of deep fakes and data \
+augmentation, but GANs application in text and NLP is an area that is less \
+explored.\n\nIn this project, I will be applying GANs for text generation and \
+will be comparing the results with existing Recurrent Neural Networks. This \
+post is divided into 4 sections"
 }], "Subsubtitle",
- CellChangeTimes->{{3.803163207600562*^9, 3.803163216152486*^9}, {
-  3.803163402070754*^9, 3.803163416449134*^9}, {3.803163449316136*^9, 
-  3.803163479085144*^9}, {3.803163611207055*^9, 3.803163618828185*^9}, {
-  3.8031642497017117`*^9, 3.803164272066533*^9}, {3.8032074957651*^9, 
-  3.8032075563223467`*^9}, {3.803207613093377*^9, 3.803207669909671*^9}, {
-  3.803296665812546*^9, 3.803296763215252*^9}, {3.803296837132388*^9, 
-  3.803296858623556*^9}, {3.8032969015373173`*^9, 3.8032969034747953`*^9}, {
-  3.803296937198983*^9, 3.803296963019855*^9}, {3.803297010318926*^9, 
-  3.803297119563981*^9}, {3.8032971825599117`*^9, 3.803297199308069*^9}, {
-  3.803297363828505*^9, 3.803297377273982*^9}, {3.8032974125081253`*^9, 
-  3.8032977384083567`*^9}},ExpressionUUID->"ad586f73-f974-4b75-a566-\
-620b61170c20"],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQfc78s8fX0DeOWg9ZvED0PGenRBDtF8+XDKJPymql
+g+iGnY+yQLTRgrRqEF3XEFUDonNKzE6DaC5FpnMgenP1jxdcYW8cVwV0fQDR
+n/4s+g6i2WT2/gPRCQxWxWZAOuJxWj2IbrNZ0gGidb4Ed4PoLYYbJ4DFDd+D
+aaE4takgevmihBkgeomJ1zwQrcTzaTWIPvPq4mawvtsvt4Jo2eaqUyC67IjG
+GRA9wWnCBRDtJOj7E0QHvWXjMgfSNtXuYNok7ZQEiP531VgRRKsE+aiC6FIv
+RzUwP0dTC0TPE2kC0wDBGJBz
+  
+  "],ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
 
 Cell[CellGroupData[{
 
-Cell["Performance Metric for text generation models", "Section",
+Cell["1. Performance Metric for text generation models", "Section",
  CellChangeTimes->{{3.8031631774912786`*^9, 3.80316325580241*^9}, {
-  3.8031633648399057`*^9, 
-  3.803163374728538*^9}},ExpressionUUID->"727ac34c-55af-4510-87fb-\
+  3.8031633648399057`*^9, 3.803163374728538*^9}, {3.803298249601289*^9, 
+  3.8032982501456537`*^9}},ExpressionUUID->"727ac34c-55af-4510-87fb-\
 bb92d88ce1c0"],
 
 Cell[BoxData[" "], "Input",
@@ -260,35 +258,36 @@ Cell[BoxData[{
      RowBox[{"Flatten", "@", "ngram1"}], ",", 
      RowBox[{"Flatten", "@", "ngram2"}]}], "]"}]}], "\n"}], "\n", 
  RowBox[{
-  RowBox[{
-   RowBox[{"avgDistanceofNgram", "[", 
-    RowBox[{"generator", ",", " ", "dataset"}], "]"}], ":=", " ", 
-   RowBox[{"Mean", "@", 
-    RowBox[{"Table", "[", 
-     RowBox[{
-      RowBox[{"findEuclideanDistance", "[", 
-       RowBox[{
-        RowBox[{"computeNGrams", "[", 
-         RowBox[{
-          RowBox[{"generator", "@", 
-           RowBox[{"latentGeneration", "[", "100", "]"}]}], ",", "n"}], "]"}],
-         ",", " ", 
-        RowBox[{"computeNGrams", "[", 
-         RowBox[{
-          RowBox[{"RandomChoice", "[", 
-           RowBox[{"dataset", ",", "100"}], "]"}], ",", "n"}], "]"}]}], "]"}],
-       ",", 
-      RowBox[{"{", 
-       RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], "]"}]}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Code",
- CellChangeTimes->{{3.8031638246894197`*^9, 
-  3.8031638319123793`*^9}},ExpressionUUID->"8cc6a749-4457-43ad-bbc6-\
+  RowBox[{"avgDistanceofNgram", "[", 
+   RowBox[{"generator", ",", " ", "dataset"}], "]"}], ":=", " ", 
+  RowBox[{"Mean", "@", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"findEuclideanDistance", "[", 
+      RowBox[{
+       RowBox[{"computeNGrams", "[", 
+        RowBox[{
+         RowBox[{"generator", "@", 
+          RowBox[{"latentGeneration", "[", "100", "]"}]}], ",", "n"}], "]"}], 
+       ",", " ", 
+       RowBox[{"computeNGrams", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"dataset", ",", "100"}], "]"}], ",", "n"}], "]"}]}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], 
+    "]"}]}]}], "\[IndentingNewLine]"}], "Code",
+ CellChangeTimes->{{3.8031638246894197`*^9, 3.8031638319123793`*^9}, {
+  3.803298579734507*^9, 
+  3.8032985806625223`*^9}},ExpressionUUID->"8cc6a749-4457-43ad-bbc6-\
 6a18b8ebdf09"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[TextData[StyleBox["(Inspired by : Murgue T., de la Higuera C. (2004) \
 Distances between Distributions: Comparing Language Models. In: Fred A., \
@@ -299,7 +298,18 @@ in Computer Science, vol 3138. Springer, Berlin, Heidelberg)", "Text"]], \
  CellChangeTimes->{{3.803034576576008*^9, 3.803034618268505*^9}, {
   3.803044419973773*^9, 
   3.803044478568988*^9}},ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-\
-2a44d82b900a"]
+2a44d82b900a"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.803298257926396*^9, 
+  3.803298258471985*^9}},ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-\
+499b224636b6"],
+
+Cell["2. GAN architecture for text", "Section",
+ CellChangeTimes->{{3.803298271797764*^9, 
+  3.8032982892800198`*^9}},ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-\
+f8a261e8cb4e"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{Full, Full},
@@ -320,28 +330,32 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 224, 4, 98, "Title",ExpressionUUID->"e99076f0-2d1d-4573-9c30-23f3c885aa1e"],
-Cell[807, 28, 146, 3, 31, "Author",ExpressionUUID->"95bdb156-a573-4254-81f7-9f010b5c04c5"],
+Cell[580, 22, 248, 4, 98, "Title",ExpressionUUID->"e99076f0-2d1d-4573-9c30-23f3c885aa1e"],
+Cell[831, 28, 146, 3, 31, "Author",ExpressionUUID->"95bdb156-a573-4254-81f7-9f010b5c04c5"],
 Cell[CellGroupData[{
-Cell[978, 35, 163, 3, 53, "Subtitle",ExpressionUUID->"21c520a9-7e2d-4259-9edd-a45c70e1cbd4"],
-Cell[1144, 40, 2218, 33, 234, "Subsubtitle",ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
+Cell[1002, 35, 163, 3, 53, "Subtitle",ExpressionUUID->"21c520a9-7e2d-4259-9edd-a45c70e1cbd4"],
+Cell[1168, 40, 1934, 31, 234, "Subsubtitle",ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
 Cell[CellGroupData[{
-Cell[3387, 77, 242, 4, 67, "Section",ExpressionUUID->"727ac34c-55af-4510-87fb-bb92d88ce1c0"],
-Cell[3632, 83, 131, 3, 30, "Input",ExpressionUUID->"75eb2596-c082-4ad5-b2d7-a079f8f1cf0f"],
+Cell[3127, 75, 293, 4, 67, "Section",ExpressionUUID->"727ac34c-55af-4510-87fb-bb92d88ce1c0"],
+Cell[3423, 81, 131, 3, 30, "Input",ExpressionUUID->"75eb2596-c082-4ad5-b2d7-a079f8f1cf0f"],
 Cell[CellGroupData[{
-Cell[3788, 90, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
+Cell[3579, 88, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
 Cell[CellGroupData[{
-Cell[4057, 98, 672, 11, 97, "Subsubsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
-Cell[4732, 111, 2161, 51, 190, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
-Cell[6896, 164, 349, 7, 73, "Input",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
-Cell[7248, 173, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
-Cell[8009, 194, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
-Cell[10359, 252, 1260, 34, 167, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
+Cell[3848, 96, 672, 11, 97, "Subsubsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
+Cell[4523, 109, 2161, 51, 190, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
+Cell[6687, 162, 349, 7, 73, "Input",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
+Cell[7039, 171, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
+Cell[7800, 192, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
+Cell[10150, 250, 1209, 33, 110, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[11670, 292, 566, 9, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"]
+Cell[CellGroupData[{
+Cell[11432, 291, 566, 9, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"],
+Cell[12001, 302, 152, 3, 30, "Input",ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-499b224636b6"],
+Cell[12156, 307, 175, 3, 67, "Section",ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-f8a261e8cb4e"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
