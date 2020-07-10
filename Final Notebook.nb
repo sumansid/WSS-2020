@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17467,        430]
-NotebookOptionsPosition[     15360,        386]
-NotebookOutlinePosition[     15756,        402]
-CellTagsIndexPosition[     15713,        399]
+NotebookDataLength[     18805,        444]
+NotebookOptionsPosition[     16457,        399]
+NotebookOutlinePosition[     16853,        415]
+CellTagsIndexPosition[     16810,        412]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -92,8 +92,6 @@ Cell[BoxData[" "], "Input",
   3.8032969335264797`*^9},ExpressionUUID->"75eb2596-c082-4ad5-b2d7-\
 a079f8f1cf0f"],
 
-Cell[CellGroupData[{
-
 Cell["Finding the Euclidean Distance between n-grams. ", "Subsection",
  CellChangeTimes->{{3.803163244812161*^9, 3.803163246452732*^9}, {
   3.80316329341599*^9, 
@@ -102,18 +100,25 @@ Cell["Finding the Euclidean Distance between n-grams. ", "Subsection",
 
 Cell[CellGroupData[{
 
+Cell[TextData[StyleBox["",
+ FontSize->16]], "Subsection",
+ CellChangeTimes->{{3.803163347896213*^9, 3.803163398280549*^9}, {
+  3.803163683940786*^9, 3.803163711786249*^9}, {3.803207415711974*^9, 
+  3.803207492031876*^9}, {3.803208596936648*^9, 3.803208617068239*^9}, {
+  3.803400169679439*^9, 3.803400217367443*^9}, {3.8034004435849123`*^9, 
+  3.803400443961328*^9}},ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-\
+1df54b124478"],
+
 Cell[TextData[StyleBox["To compare the different model performances, we will \
 be finding the euclidean distance between text generated from two models. The \
 initial step will be to remove special characters and diacritics from the \
-generated and the real dataset. The following code accomplishes this goal by \
-using StringReplace function to remove the special characters from the \
-dataset.",
- FontSize->16]], "Subsubsection",
- CellChangeTimes->{{3.803163347896213*^9, 3.803163398280549*^9}, {
-  3.803163683940786*^9, 3.803163711786249*^9}, {3.803207415711974*^9, 
-  3.803207492031876*^9}, {3.803208596936648*^9, 
-  3.803208617068239*^9}},ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-\
-1df54b124478"],
+real dataset. The following code accomplishes this goal by using a \
+combination of StringReplace, ToLowerCase and Remove Diacritics functions to \
+normalize the characters in the dataset.",
+ FontSize->16]], "Text",
+ CellChangeTimes->{{3.803400431656764*^9, 
+  3.8034004418187227`*^9}},ExpressionUUID->"6591e263-7b69-420d-9e70-\
+ada8616d283e"],
 
 Cell[BoxData[
  RowBox[{
@@ -158,23 +163,31 @@ Cell[BoxData[
            RowBox[{"Remove", " ", "Brackets"}], "*)"}], "\n", "\t", 
           RowBox[{
            RowBox[{"\"\<%\>\"", "|", "\"\<:\>\""}], " ", "\[Rule]", " ", 
-           "\"\<\>\""}]}], "}"}]}], 
-       RowBox[{"(*", 
-        RowBox[{"Remove", " ", "Colons", " ", "and", " ", "%"}], "*)"}], 
-       "]"}]}]}]}], ";"}], "\n"}]], "Code",
+           "\"\<\>\""}], ",", 
+          RowBox[{"(*", 
+           RowBox[{"Remove", " ", "Colons", " ", "and", " ", "%"}], "*)"}], 
+          "\n", "\t", 
+          RowBox[{
+           RowBox[{"\"\<[\>\"", "|", "\"\<]\>\""}], "\[Rule]", "\"\<\>\""}]}],
+          "}"}]}], "]"}]}]}]}], ";"}], "\n"}]], "Code",
  CellChangeTimes->{{3.803163432407468*^9, 3.803163436114833*^9}, {
   3.803163757506627*^9, 3.8031637664158154`*^9}, {3.803163859084519*^9, 
-  3.8031638609639463`*^9}},
- CellLabel->
-  "In[1363]:=",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
+  3.8031638609639463`*^9}, {3.803400237001539*^9, 
+  3.803400249663846*^9}},ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-\
+e4d4c2711722"],
 
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{"The", " ", "following", " ", "code", " ", "generate"}]}]], "Input",\
-
+Cell["\<\
+The next step is to create a lookup table for the different characters so \
+that we can put them in their respective coordinates in the sparse array. The \
+following code makes an association that maps characters and special tokens \
+to an unique point.\
+\>", "Text",
  CellChangeTimes->{{3.803163872095648*^9, 3.803163879361498*^9}, 
-   3.803208624956294*^9, {3.803208830285326*^9, 
-   3.803208835552998*^9}},ExpressionUUID->"a25ffabd-9f55-42cb-a427-\
+   3.803208624956294*^9, {3.803208830285326*^9, 3.803208835552998*^9}, {
+   3.803400258737793*^9, 3.803400259315033*^9}, {3.80340038475633*^9, 
+   3.803400427017728*^9}, {3.803400494093054*^9, 3.80340057424549*^9}, {
+   3.803400621747838*^9, 
+   3.8034006536694183`*^9}},ExpressionUUID->"a25ffabd-9f55-42cb-a427-\
 f06712a1e5c8"],
 
 Cell[BoxData[
@@ -197,6 +210,18 @@ Cell[BoxData[
  CellChangeTimes->{{3.803163770181651*^9, 3.803163801447587*^9}, 
    3.803163870245639*^9},ExpressionUUID->"2e931e65-9fe9-42dd-b03e-\
 9f745e8d4c03"],
+
+Cell["\<\
+A function to compute n-grams is created which compute \
+\[OpenCurlyDoubleQuote]n\[CloseCurlyDoubleQuote] n-gram for a given wordlist \
+and puts frequencies of each n-gram in a SparseArray. A sparse-array is \
+chosen for faster computation for higher \[OpenCurlyDoubleQuote]n\
+\[CloseCurlyDoubleQuote] of the n-grams.\
+\>", "Text",
+ CellChangeTimes->{{3.8034006589179497`*^9, 3.8034006773812647`*^9}, {
+  3.803400727072348*^9, 3.803400830633148*^9}, {3.8034012621741867`*^9, 
+  3.803401275209092*^9}},ExpressionUUID->"8403b5a5-5913-4a29-a171-\
+70b2e1ee8953"],
 
 Cell[BoxData[
  RowBox[{"\n", 
@@ -256,6 +281,19 @@ Cell[BoxData[
   3.8031638230150957`*^9}},ExpressionUUID->"3899c5b6-52ba-4a01-bf97-\
 cebe12f8be3f"],
 
+Cell["\<\
+We then compute the euclidean distance between the two distributions of \
+n-grams in the dataset and generated text. The findEuclideanDistance computes \
+the euclidean distance between two n gram distributions. The \
+DistancesofNgrams function takes the generator and the training dataset to \
+find the euclidean distance between n-gram distributions where n goes from 1 \
+to 5.\
+\>", "Text",
+ CellChangeTimes->{{3.803400844637042*^9, 3.803400850574594*^9}, {
+  3.803401041431099*^9, 3.803401092244543*^9}, {3.803401141047371*^9, 
+  3.803401252007017*^9}},ExpressionUUID->"aa4c0b93-ac84-4b7a-b9aa-\
+f1754387fded"],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -266,46 +304,43 @@ Cell[BoxData[{
      RowBox[{"Flatten", "@", "ngram1"}], ",", 
      RowBox[{"Flatten", "@", "ngram2"}]}], "]"}]}], "\n"}], "\n", 
  RowBox[{
-  RowBox[{"avgDistanceofNgram", "[", 
-   RowBox[{"generator", ",", " ", "dataset"}], "]"}], ":=", " ", 
-  RowBox[{"Mean", "@", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"findEuclideanDistance", "[", 
-      RowBox[{
-       RowBox[{"computeNGrams", "[", 
-        RowBox[{
-         RowBox[{"generator", "@", 
-          RowBox[{"latentGeneration", "[", "100", "]"}]}], ",", "n"}], "]"}], 
-       ",", " ", 
-       RowBox[{"computeNGrams", "[", 
-        RowBox[{
-         RowBox[{"RandomChoice", "[", 
-          RowBox[{"dataset", ",", "100"}], "]"}], ",", "n"}], "]"}]}], "]"}], 
-     ",", 
-     RowBox[{"{", 
-      RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], 
-    "]"}]}]}], "\[IndentingNewLine]"}], "Code",
+  RowBox[{"DistancesofNgrams", "[", 
+   RowBox[{"generator", ",", " ", "dataset_"}], "]"}], ":=", " ", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"findEuclideanDistance", "[", 
+     RowBox[{
+      RowBox[{"computeNGrams", "[", 
+       RowBox[{
+        RowBox[{"generator", "@", 
+         RowBox[{"latentGeneration", "[", "100", "]"}]}], ",", "n"}], "]"}], 
+      ",", " ", 
+      RowBox[{"computeNGrams", "[", 
+       RowBox[{
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"dataset", ",", "100"}], "]"}], ",", "n"}], "]"}]}], "]"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Code",
  CellChangeTimes->{{3.8031638246894197`*^9, 3.8031638319123793`*^9}, {
-  3.803298579734507*^9, 
-  3.8032985806625223`*^9}},ExpressionUUID->"8cc6a749-4457-43ad-bbc6-\
+  3.803298579734507*^9, 3.8032985806625223`*^9}, {3.803401023706318*^9, 
+  3.8034010355553293`*^9}},ExpressionUUID->"8cc6a749-4457-43ad-bbc6-\
 6a18b8ebdf09"]
-}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[TextData[StyleBox["(Inspired by : Murgue T., de la Higuera C. (2004) \
-Distances between Distributions: Comparing Language Models. In: Fred A., \
-Caelli T.M., Duin R.P.W., Campilho A.C., de Ridder D. (eds) Structural, \
-Syntactic, and Statistical Pattern Recognition. SSPR /SPR 2004. Lecture Notes \
-in Computer Science, vol 3138. Springer, Berlin, Heidelberg)", "Text"]], \
-"Subtitle",
+Cell[TextData[StyleBox["( Murgue T., de la Higuera C. (2004) Distances \
+between Distributions: Comparing Language Models. In: Fred A., Caelli T.M., \
+Duin R.P.W., Campilho A.C., de Ridder D. (eds) Structural, Syntactic, and \
+Statistical Pattern Recognition. SSPR /SPR 2004. Lecture Notes in Computer \
+Science, vol 3138. Springer, Berlin, Heidelberg)", "Text"]], "Subtitle",
  CellChangeTimes->{{3.803034576576008*^9, 3.803034618268505*^9}, {
-  3.803044419973773*^9, 
-  3.803044478568988*^9}},ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-\
+  3.803044419973773*^9, 3.803044478568988*^9}, {3.803400840028737*^9, 
+  3.803400841798848*^9}},ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-\
 2a44d82b900a"],
 
 Cell[BoxData[""], "Input",
@@ -320,65 +355,43 @@ Cell["2. GAN architecture for text", "Section",
   3.8032982892800198`*^9}},ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-\
 f8a261e8cb4e"],
 
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{
-   StyleBox[
-    RowBox[{"Some", " ", "Extra", " ", "codes"}], "Text"], 
-   StyleBox["\[IndentingNewLine]", "Text"], "\[IndentingNewLine]", 
-   StyleBox[
-    RowBox[{
-     RowBox[{
-      RowBox[{"toInt", "[", "n_", "]"}], " ", ":=", " ", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"ToExpression", "[", "#", "]"}], "&"}], "/@", 
-       RowBox[{"StringSplit", "[", 
-        RowBox[{
-         RowBox[{"StringTrim", "[", 
-          RowBox[{"n", ",", 
-           RowBox[{"\"\<{\>\"", " ", "|", " ", "\"\<}\>\""}]}], "]"}], ",", 
-         "\"\<,\>\""}], "]"}]}]}], ";"}], "Code"], 
-   StyleBox["\[IndentingNewLine]", "Code"], 
-   StyleBox["\[IndentingNewLine]", "Code"], 
-   StyleBox[
-    RowBox[{
-     RowBox[{"b", " ", "=", " ", 
-      RowBox[{"distancesLog", "[", 
-       RowBox[{"[", 
-        RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";"}], "Code"], 
-   StyleBox["\[IndentingNewLine]", "Code"], 
-   StyleBox[
-    RowBox[{
-     RowBox[{"toInt", "[", "b", "]"}], ";"}], "Code"], 
-   StyleBox["\[IndentingNewLine]", "Code"], 
-   StyleBox[
-    RowBox[{
-     RowBox[{"distancesLogUpdated", " ", "=", " ", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"toInt", "[", "#", "]"}], "&"}], "/@", " ", 
-       RowBox[{"distancesLog", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "Code"], 
-   StyleBox["\[IndentingNewLine]", "Code"], 
-   StyleBox[
-    RowBox[{"distancesLogUpdated", " ", "=", " ", 
-     RowBox[{"MapIndexed", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Flatten", "@", 
-         RowBox[{"Join", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"#2", " ", "*", " ", "10"}], "}"}], ",", 
-           RowBox[{"{", "#1", "}"}]}], "]"}]}], "&"}], ",", 
-       "distancesLogUpdated"}], "]"}]}], "Code"]}]}]], "Input",
- CellChangeTimes->{{3.803399865260084*^9, 
-  3.803399893695805*^9}},ExpressionUUID->"09b20c6f-e6d7-4feb-8a7f-\
+Cell["\<\
+Generative Adversarial Networks or GANs are a deep learning architecture for \
+training generative models in which two models (Generator and Discriminator) \
+train in an adversarial zero sum game. After training
+the generator is able to produce plausible example that are almost \
+indistinguishable from the training set data. Recent improvements in GANs \
+have significantly improved data augmentation in machine learning tasks that \
+deal with images and in this section of the post some changes to a GAN \
+architecture will be made in order for text generation.
+
+
+
+
+
+
+
+
+
+
+Some Extra codes
+
+toInt[n_] := ToExpression[#] & /@ StringSplit[StringTrim[n, \"{\" | \"}\"], \
+\",\"];
+
+b = distancesLog[[1, 2]];
+toInt[b];
+distancesLogUpdated = toInt[#] & /@ distancesLog[[All, 2]];
+distancesLogUpdated = MapIndexed[Flatten@Join[{#2 * 10}, {#1}] &, \
+distancesLogUpdated]\
+\>", "Text",
+ CellChangeTimes->{{3.803399865260084*^9, 3.803399893695805*^9}, {
+  3.803401562391534*^9, 3.803401594832176*^9}, {3.803402300729458*^9, 
+  3.8034023962922173`*^9}, {3.803402446795101*^9, 3.803402471395349*^9}, {
+  3.803402658456777*^9, 3.803402716840114*^9}, {3.803402845187859*^9, 
+  3.803402948712865*^9}, {3.8034029812517157`*^9, 3.803403088659532*^9}, {
+  3.803403447354724*^9, 
+  3.803403448124292*^9}},ExpressionUUID->"09b20c6f-e6d7-4feb-8a7f-\
 7ab05ead7566"]
 }, Open  ]]
 }, Open  ]]
@@ -410,25 +423,26 @@ Cell[1168, 40, 2630, 39, 300, "Subsubtitle",ExpressionUUID->"ad586f73-f974-4b75-
 Cell[CellGroupData[{
 Cell[3823, 83, 293, 4, 67, "Section",ExpressionUUID->"727ac34c-55af-4510-87fb-bb92d88ce1c0"],
 Cell[4119, 89, 131, 3, 30, "Input",ExpressionUUID->"75eb2596-c082-4ad5-b2d7-a079f8f1cf0f"],
+Cell[4253, 94, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
 Cell[CellGroupData[{
-Cell[4275, 96, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
-Cell[CellGroupData[{
-Cell[4544, 104, 701, 11, 63, "Subsubsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
-Cell[5248, 117, 2161, 51, 190, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
-Cell[7412, 170, 349, 7, 73, "Input",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
-Cell[7764, 179, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
-Cell[8525, 200, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
-Cell[10875, 258, 1209, 33, 110, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
-}, Open  ]]
+Cell[4522, 102, 424, 7, 33, "Subsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
+Cell[4949, 111, 578, 9, 84, "Text",ExpressionUUID->"6591e263-7b69-420d-9e70-ada8616d283e"],
+Cell[5530, 122, 2316, 54, 210, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
+Cell[7849, 178, 672, 12, 58, "Text",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
+Cell[8524, 192, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
+Cell[9285, 213, 568, 10, 58, "Text",ExpressionUUID->"8403b5a5-5913-4a29-a171-70b2e1ee8953"],
+Cell[9856, 225, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
+Cell[12206, 283, 623, 11, 58, "Text",ExpressionUUID->"aa4c0b93-ac84-4b7a-b9aa-f1754387fded"],
+Cell[12832, 296, 1214, 32, 110, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12157, 299, 566, 9, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"],
-Cell[12726, 310, 152, 3, 30, "Input",ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-499b224636b6"],
+Cell[14107, 335, 597, 8, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"],
+Cell[14707, 345, 152, 3, 30, "Input",ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-499b224636b6"],
 Cell[CellGroupData[{
-Cell[12903, 317, 175, 3, 67, "Section",ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-f8a261e8cb4e"],
-Cell[13081, 322, 2239, 59, 430, "Input",ExpressionUUID->"09b20c6f-e6d7-4feb-8a7f-7ab05ead7566"]
+Cell[14884, 352, 175, 3, 67, "Section",ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-f8a261e8cb4e"],
+Cell[15062, 357, 1355, 37, 495, "Text",ExpressionUUID->"09b20c6f-e6d7-4feb-8a7f-7ab05ead7566"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
