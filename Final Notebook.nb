@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14335,        355]
-NotebookOptionsPosition[     12359,        314]
-NotebookOutlinePosition[     12755,        330]
-CellTagsIndexPosition[     12712,        327]
+NotebookDataLength[     15048,        363]
+NotebookOptionsPosition[     13071,        322]
+NotebookOutlinePosition[     13467,        338]
+CellTagsIndexPosition[     13424,        335]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -59,16 +59,24 @@ been done with GANs for image translation, generation of deep fakes and data \
 augmentation, but GANs application in text and NLP is an area that is less \
 explored.\n\nIn this project, I will be applying GANs for text generation and \
 will be comparing the results with existing Recurrent Neural Networks. This \
-post is divided into 4 sections"
+project aims to show that through adversarial training better text generation \
+can be achieved compared to existing RNN only models. This post is divided \
+into 4 sections. In the first section, I will explain the metric that will be \
+used to measure the performance of the text generation models. I will then \
+explain the GAN architecture that was used for text generation and will show \
+it\[CloseCurlyQuote]s performance while generating texts of various domains \
+eg. Chemical Names, Pokemon Names etc. I will then train existing RNN \
+language model (baseline) with the same datasets and finally will make a \
+comparison between the performance of GAN and existing models."
 }], "Subsubtitle",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBmIQfc78s8fX0DeOWg9ZvED0PGenRBDtF8+XDKJPymql
+1:eJxTTMoPSmViYGAQBWIQfc78s8fX0DeOWg9ZvED0PGenRBDtF8+XDKJPymql
 g+iGnY+yQLTRgrRqEF3XEFUDonNKzE6DaC5FpnMgenP1jxdcYW8cVwV0fQDR
 n/4s+g6i2WT2/gPRCQxWxWZAOuJxWj2IbrNZ0gGidb4Ed4PoLYYbJ4DFDd+D
 aaE4takgevmihBkgeomJ1zwQrcTzaTWIPvPq4mawvtsvt4Jo2eaqUyC67IjG
 GRA9wWnCBRDtJOj7E0QHvWXjMgfSNtXuYNok7ZQEiP531VgRRKsE+aiC6FIv
-RzUwP0dTC0TPE2kC0wDBGJBz
-  
+RzUwP0dTC0TPE2kC05caWA66AemqCzN/gehHgu+Z3IH0F603rCAaAORgoII=
+
   "],ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
 
 Cell[CellGroupData[{
@@ -94,13 +102,13 @@ Cell["Finding the Euclidean Distance between n-grams. ", "Subsection",
 
 Cell[CellGroupData[{
 
-Cell["\<\
-To compare the different model performances, we will be finding the euclidean \
-distance between text generated from two models. The initial step will be to \
-remove special characters and diacritics from the generated and the real \
-dataset. The following code accomplishes this goal by using StringReplace \
-function to remove the special characters from the dataset.\
-\>", "Subsubsection",
+Cell[TextData[StyleBox["To compare the different model performances, we will \
+be finding the euclidean distance between text generated from two models. The \
+initial step will be to remove special characters and diacritics from the \
+generated and the real dataset. The following code accomplishes this goal by \
+using StringReplace function to remove the special characters from the \
+dataset.",
+ FontSize->16]], "Subsubsection",
  CellChangeTimes->{{3.803163347896213*^9, 3.803163398280549*^9}, {
   3.803163683940786*^9, 3.803163711786249*^9}, {3.803207415711974*^9, 
   3.803207492031876*^9}, {3.803208596936648*^9, 
@@ -334,27 +342,27 @@ Cell[580, 22, 248, 4, 98, "Title",ExpressionUUID->"e99076f0-2d1d-4573-9c30-23f3c
 Cell[831, 28, 146, 3, 31, "Author",ExpressionUUID->"95bdb156-a573-4254-81f7-9f010b5c04c5"],
 Cell[CellGroupData[{
 Cell[1002, 35, 163, 3, 53, "Subtitle",ExpressionUUID->"21c520a9-7e2d-4259-9edd-a45c70e1cbd4"],
-Cell[1168, 40, 1934, 31, 234, "Subsubtitle",ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
+Cell[1168, 40, 2617, 39, 300, "Subsubtitle",ExpressionUUID->"ad586f73-f974-4b75-a566-620b61170c20"],
 Cell[CellGroupData[{
-Cell[3127, 75, 293, 4, 67, "Section",ExpressionUUID->"727ac34c-55af-4510-87fb-bb92d88ce1c0"],
-Cell[3423, 81, 131, 3, 30, "Input",ExpressionUUID->"75eb2596-c082-4ad5-b2d7-a079f8f1cf0f"],
+Cell[3810, 83, 293, 4, 67, "Section",ExpressionUUID->"727ac34c-55af-4510-87fb-bb92d88ce1c0"],
+Cell[4106, 89, 131, 3, 30, "Input",ExpressionUUID->"75eb2596-c082-4ad5-b2d7-a079f8f1cf0f"],
 Cell[CellGroupData[{
-Cell[3579, 88, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
+Cell[4262, 96, 244, 4, 54, "Subsection",ExpressionUUID->"a1b3883e-f640-42c1-ae39-075e1098fb67"],
 Cell[CellGroupData[{
-Cell[3848, 96, 672, 11, 97, "Subsubsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
-Cell[4523, 109, 2161, 51, 190, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
-Cell[6687, 162, 349, 7, 73, "Input",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
-Cell[7039, 171, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
-Cell[7800, 192, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
-Cell[10150, 250, 1209, 33, 110, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
+Cell[4531, 104, 701, 11, 63, "Subsubsection",ExpressionUUID->"d884cfd1-9e47-4f6a-8d90-1df54b124478"],
+Cell[5235, 117, 2161, 51, 190, "Code",ExpressionUUID->"d4e85cf3-7f29-4191-a3bf-e4d4c2711722"],
+Cell[7399, 170, 349, 7, 73, "Input",ExpressionUUID->"a25ffabd-9f55-42cb-a427-f06712a1e5c8"],
+Cell[7751, 179, 758, 19, 129, "Code",ExpressionUUID->"2e931e65-9fe9-42dd-b03e-9f745e8d4c03"],
+Cell[8512, 200, 2347, 56, 319, "Code",ExpressionUUID->"3899c5b6-52ba-4a01-bf97-cebe12f8be3f"],
+Cell[10862, 258, 1209, 33, 110, "Code",ExpressionUUID->"8cc6a749-4457-43ad-bbc6-6a18b8ebdf09"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11432, 291, 566, 9, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"],
-Cell[12001, 302, 152, 3, 30, "Input",ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-499b224636b6"],
-Cell[12156, 307, 175, 3, 67, "Section",ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-f8a261e8cb4e"]
+Cell[12144, 299, 566, 9, 65, "Subtitle",ExpressionUUID->"3e5b2d0f-8d7f-4528-ad55-2a44d82b900a"],
+Cell[12713, 310, 152, 3, 30, "Input",ExpressionUUID->"1cab72a7-6ae4-4a6d-88f4-499b224636b6"],
+Cell[12868, 315, 175, 3, 67, "Section",ExpressionUUID->"c8e0d9fd-9bcb-4c01-a7ae-f8a261e8cb4e"]
 }, Open  ]]
 }, Open  ]]
 }
